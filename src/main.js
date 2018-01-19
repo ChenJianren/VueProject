@@ -16,10 +16,11 @@ import App from './App.vue'
 import api from "./js/api-config.js"
 Vue.prototype.$api = api
 import router from './router'
-
+import MyFilter from "./filter";
 //启动
 Vue.use(Vuex);
 Vue.use(ElementUI);
+Vue.use(MyFilter);
 
 new Vue({
   el: '#app',
