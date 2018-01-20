@@ -7,6 +7,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import "normalize.css"
 import "@/less/index.less"
 import "@/css/style.css"
+import "@/lib/css/magnifier.css";
 import axios from "axios"
 axios.defaults.withCredentials = true
 axios.defaults.baseURL = "http://111.230.36.92:8888"

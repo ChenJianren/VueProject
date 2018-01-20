@@ -150,16 +150,13 @@ export default {
     getgoodsgroup() {
       this.$http.get(this.$api.goodsContent).then(res => {
         res.data.message.forEach((v, i) => {
-          // console.log(v);
           v.datas.forEach((v2, i2) => {
-            // console.log(v2.img_url);
             v2.img_url = v2.img_url.replace(
               /127.0.0.1:8899/,
               "111.230.36.92:8888/"
             );
           });
         });
-        // console.log(res.data.message);
         this.list = res.data.message;
       });
     }
