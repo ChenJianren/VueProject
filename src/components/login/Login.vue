@@ -57,7 +57,7 @@ export default {
             duration: 2000
           });
           let nextPath = this.$route.query.nextPath;
-          this.$router.push({ path: nextPath ? nextPath : "index" });
+          this.$router.push({ path: nextPath ? nextPath : "list" });
         } else {
           this.$alert(res.data.message);
         }

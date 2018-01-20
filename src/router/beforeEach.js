@@ -20,7 +20,7 @@ export default function (to, from, next) {
     }
     // 用户如果已经登录了，直接调到admin页面
     if (toName == "login" && isLogin) {
-      next({ name: 'index' });
+      next({ name: 'list' });
     }
     // 如果用户没有登录，则跳转到登录页面
     else if (toName != "login" && !isLogin) {

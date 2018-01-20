@@ -9,7 +9,8 @@
           <a target="_blank" href="#"></a>
           </div>
           <div id="menu" class="right-box">
-            <a href="/login.html">登录</a><a href="/register.html">注册</a><strong>|</strong>
+            <router-link :to="{name:'login'}">登录</router-link>
+            <a href="/register.html">注册</a><strong>|</strong>
              <a><i class="iconfont icon-phone"></i>联系我们</a>
              <router-link :to="{ name: 'shopcart' }">
               <i class="iconfont icon-cart"></i>
