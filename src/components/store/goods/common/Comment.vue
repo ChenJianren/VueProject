@@ -105,7 +105,7 @@ export default {
   created() {
     this.getbypage();
   },
-  watch: {s
+  watch: {
     $route() {
       this.id = this.$route.params.id;
       this.getbypage();
