@@ -18,6 +18,7 @@ import api from "./js/api-config.js"
 Vue.prototype.$api = api
 import router from './router'
 import MyFilter from "./filter";
+import store from "./store";
 //启动
 Vue.use(Vuex);
 Vue.use(ElementUI);
@@ -27,5 +28,6 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  store: new Vuex.Store(store)
 })

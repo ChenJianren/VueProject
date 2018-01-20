@@ -49,7 +49,7 @@
                   <dl>
                     <dt>购买数量</dt>
                     <dd>
-                      <el-input-number size="mini"></el-input-number>
+                      <el-input-number v-model="num1" size="mini" :max="goods.goodsinfo.stock_quantity"></el-input-number>
                       <span class="stock-txt">
                         库存
                         <em id="commodityStockNum">{{goods.goodsinfo.stock_quantity}}</em>件
@@ -59,8 +59,8 @@
                   <dl>
                     <dd>
                       <div class="btn-buy" id="buyButton">
-                        <button class="buy" onclick="cartAdd(this,'/',1,'/shopping.html');">立即购买</button>
-                        <button class="add" onclick="cartAdd(this,'/',0,'/cart.html');">加入购物车</button>
+                        <button class="buy" >立即购买</button>
+                        <button class="add" @click="add">加入购物车</button>
                       </div>
                     </dd>
                   </dl>
@@ -124,6 +124,7 @@ import Comment from "./common/Comment";
 export default {
   data() {
     return {
+      num1: 0,
       id: this.$route.params.id,
       goods: {
         goodsinfo: {},
@@ -148,6 +149,12 @@ export default {
           );
         });
         this.goods = res.data.message;
+      });
+    },
+    add() {
+      this.$store.commit("modifyShopping", {
+        id: this.id,
+        count: this.num1 * this.goods.goodsinfo.sell_price
       });
     }
   },
