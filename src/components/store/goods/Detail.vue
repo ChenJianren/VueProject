@@ -154,7 +154,7 @@ export default {
     add() {
       this.$store.commit("modifyShopping", {
         id: this.id,
-        count: this.num1 * this.goods.goodsinfo.sell_price
+        count: this.num1 + (this.$store.state.shopping[this.id] || 0)
       });
     }
   },

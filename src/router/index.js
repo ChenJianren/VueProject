@@ -16,8 +16,8 @@ let router = new Router({
         { name: 'list', path: '/', component: List },
         { name: 'detail', path: 'detail/:id', component: Detail },
         { name: 'shopcart', path: 'shopcart', component: Shopcart },
-        { name: 'commit', path: 'order/commit', component: Commit },
-        { name: 'pay', path: 'order/pay', component: Pay }
+        { name: 'commit', path: 'order/commit/:ids', component: Commit },
+        { name: 'pay', path: 'order/pay/:id', component: Pay }
       ]
     },
     { name: 'login', path: '/login', component: Login },

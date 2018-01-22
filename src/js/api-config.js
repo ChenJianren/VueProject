@@ -26,9 +26,10 @@ export default {
   shopcartGoods: `/site/comment/getshopcargoods/`,        // 获取购物车商品数据, 需要参数: goodsIDS
 
   // 订单数据
-  orderList: ` /site/validate/order/getgoodslist/`,        // 获取订单商品列表数据, 需要参数: goodsIDS
+  orderList: `/site/validate/order/getgoodslist/`,         // 获取订单商品列表数据, 需要参数: goodsIDS
   orderSubmit: `/site/validate/order/setorder`,            // 订单提交
   orderPay: `/site/validate/order/pay/`,                   // 订单支付, 需要查询: orderID
+  order: `/site/validate/order/getorder/`,                  // 根据订单ID获取订单信息,需要查询: orderID
   orderHistory: `/site/validate/order/userorderlist`,      // 获取历史订单列表, 需要查询: pageIndex 与 pageSize
   orderDetail: ` /site/validate/order/getorderdetial/`,    // 获取订单详情, 需要查询: orderID
   orderCancel: `/site/validate/order/cancelorder/`,        // 取消订单, 需要查询: orderID
